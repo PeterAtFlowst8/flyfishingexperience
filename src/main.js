@@ -1,77 +1,73 @@
 import './style.css'
 
-console.log('Fly Fishing Experience is ready to cast!');
+console.log('Fly Fishing Experience: Broadsheet Edition Ready.');
 
-// Navbar Scroll Effect with Enhanced Glassmorphism
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
-
-// Parallax Effect on Hero Background
-const heroBackground = document.querySelector('.hero-bg');
-if (heroBackground) {
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    const parallaxSpeed = 0.5;
-    heroBackground.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-  });
-}
-
-// Intersection Observer for Scroll-Triggered Animations
+// 1. Intersection Observer for "Fade In" of Grid Items
 const observerOptions = {
-  threshold: 0.15,
-  rootMargin: '0px 0px -100px 0px'
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      // Optional: unobserve after animation to improve performance
-      // observer.unobserve(entry.target);
+      // Stop observing once visible to avoid re-triggering
+      observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
-// Observe sections for fade-in animations
-const sections = document.querySelectorAll('.mission, .services, .faq, .footer');
-sections.forEach(section => {
-  section.classList.add('scroll-fade-in');
-  observer.observe(section);
+// Target the new grid components for animation
+const gridItems = document.querySelectorAll(
+  '.grid-hero, .grid-mission, .grid-location, .grid-testimonials, .service-menu-item, .grid-faq, .footer-section'
+);
+
+gridItems.forEach((item, index) => {
+  item.style.opacity = '0';
+  item.style.transform = 'translateY(20px)';
+  item.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out'; // Define transition here or in CSS
+
+  // Stagger the service menu items slightly
+  if (item.classList.contains('service-menu-item')) {
+    // Calculate index relative to the start of service items for stagger
+    // simplified stagger for now
+    item.style.transitionDelay = `${(index % 3) * 0.1}s`;
+  }
+
+  observer.observe(item);
 });
 
-// Observe service cards individually for stagger effect
-const serviceCards = document.querySelectorAll('.service-card');
-serviceCards.forEach((card, index) => {
-  card.classList.add('scroll-fade-in');
-  card.style.transitionDelay = `${index * 0.1}s`;
-  observer.observe(card);
-});
+// Add a class to handle the "visible" state
+const styleSheet = document.createElement("style");
+styleSheet.innerText = `
+  .visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+`;
+document.head.appendChild(styleSheet);
 
-// FAQ Accordion Logic with Enhanced Animation
+
+// 2. FAQ Accordion Logic
 document.querySelectorAll('.accordion-header').forEach(button => {
   button.addEventListener('click', () => {
     const accordionItem = button.parentElement;
-    const wasActive = accordionItem.classList.contains('active');
+    const isActive = accordionItem.classList.contains('active');
 
     // Close all other accordion items
     document.querySelectorAll('.accordion-item').forEach(item => {
-      if (item !== accordionItem) {
-        item.classList.remove('active');
-      }
+      item.classList.remove('active');
     });
 
-    // Toggle current item
-    accordionItem.classList.toggle('active');
+    // Toggle current item if it wasn't already active
+    if (!isActive) {
+      accordionItem.classList.add('active');
+    }
   });
 });
 
-// Smooth Scroll for Anchor Links
+// 3. Smooth Scroll for Anchor Links (Masthead -> Sections)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -80,21 +76,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
-      const navbarHeight = navbar.offsetHeight;
-      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight - 20;
+      // Calculate offset (masthead height approx 150px-200px, but it's static now)
+      // Since it's static, we can scroll to the top of the element minus a small buffer
+      const offset = 20;
+      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - offset;
 
       window.scrollTo({
-        top: targetPosition,
+        top: offsetPosition,
         behavior: 'smooth'
       });
     }
   });
-});
-
-// Add cursor pointer class to interactive elements (accessibility)
-const interactiveElements = document.querySelectorAll('.service-card, .accordion-header, button:not(.btn)');
-interactiveElements.forEach(el => {
-  if (!el.style.cursor) {
-    el.style.cursor = 'pointer';
-  }
 });
