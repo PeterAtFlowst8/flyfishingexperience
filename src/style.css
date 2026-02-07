@@ -302,21 +302,15 @@ p {
 }
 
 .booking-link {
-  color: var(--color-market-blue) !important;
-  position: relative;
+  color: var(--color-ink);
+  font-weight: 700;
+  text-decoration: none;
 }
 
-.booking-link::after {
-  content: '';
-  position: absolute;
-  width: 140%;
-  height: 140%;
-  border: 2px solid var(--color-market-blue);
-  border-radius: 50%;
-  top: -20%;
-  left: -20%;
-  transform: rotate(-10deg);
-  pointer-events: none;
+.booking-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 /* Hero Section - "The Hook" */
@@ -335,7 +329,7 @@ p {
 .hero-headline {
   font-family: var(--font-masthead);
   font-size: clamp(3rem, 12vw, 8rem);
-  line-height: 0.85;
+  line-height: 1.1;
   text-transform: uppercase;
   margin-bottom: var(--space-sm);
   color: var(--color-ink);
@@ -358,14 +352,11 @@ p {
   max-width: 600px;
 }
 
-.engraving-placeholder {
-  border: var(--border-thick);
-  padding: var(--space-xl) var(--space-md);
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--color-ink);
-  background: var(--color-paper-grey);
-  border-style: dashed;
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
 }
 
 .hero-tagline {
@@ -462,31 +453,23 @@ p {
   text-transform: uppercase;
 }
 
-.menu-image-placeholder {
+.menu-image-container {
   height: 200px;
-  border: 2px dashed var(--color-ink);
+  border-bottom: var(--border-thick);
   margin-bottom: var(--space-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  background-color: var(--color-paper-grey);
-  color: var(--color-ink);
-  position: relative;
   overflow: hidden;
+  background-color: var(--color-newsprint);
 }
 
-.menu-image-placeholder::after {
-  content: 'PENDING';
-  position: absolute;
-  border: 3px solid var(--color-ink);
-  padding: 0.5rem 1rem;
-  font-weight: 700;
-  transform: rotate(-15deg);
-  opacity: 0.2;
-  font-size: 2rem;
-  pointer-events: none;
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: var(--space-sm);
+  mix-blend-mode: multiply;
 }
 
 .menu-details p {
