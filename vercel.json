@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/((?!coming-soon.html).*)",
+      "source": "/((?!coming-soon.html|api/).*)",
       "destination": "/coming-soon.html",
       "permanent": false
     }

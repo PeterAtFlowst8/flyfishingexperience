@@ -67,7 +67,59 @@ document.querySelectorAll('.accordion-header').forEach(button => {
   });
 });
 
-// 3. Smooth Scroll for Anchor Links (Masthead -> Sections)
+// 3. Contact Form Submission
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector('.submit-btn');
+    const submitText = contactForm.querySelector('.submit-text');
+    const submitLoading = contactForm.querySelector('.submit-loading');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    // Reset messages
+    successMsg.style.display = 'none';
+    errorMsg.style.display = 'none';
+
+    // Loading state
+    submitBtn.disabled = true;
+    submitText.style.display = 'none';
+    submitLoading.style.display = 'inline';
+
+    const data = {
+      name: document.getElementById('name').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      phone: document.getElementById('phone').value.trim(),
+      service: document.getElementById('service').value,
+      message: document.getElementById('message').value.trim(),
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        contactForm.reset();
+        successMsg.style.display = 'block';
+      } else {
+        errorMsg.style.display = 'block';
+      }
+    } catch {
+      errorMsg.style.display = 'block';
+    } finally {
+      submitBtn.disabled = false;
+      submitText.style.display = 'inline';
+      submitLoading.style.display = 'none';
+    }
+  });
+}
+
+// 4. Smooth Scroll for Anchor Links (Masthead -> Sections)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();

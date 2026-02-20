@@ -223,8 +223,68 @@
 
     </div> <!-- End Content Grid -->
 
+    <!-- Contact / Booking Section -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-header">
+          <div class="section-rule"></div>
+          <h2 class="contact-title">BUCHUNG & KONTAKT</h2>
+          <div class="section-rule"></div>
+        </div>
+        <div class="contact-body">
+          <div class="contact-intro">
+            <p>Kein Anmeldeformular mit 15 Feldern. Einfach kurz schreiben, was ihr vorhabt — wir melden uns innerhalb von 24 Stunden.</p>
+          </div>
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">NAME *</label>
+                <input type="text" id="name" name="name" required placeholder="Max Mustermann" autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">E-MAIL *</label>
+                <input type="email" id="email" name="email" required placeholder="max@beispiel.de" autocomplete="email">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">TELEFON (optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="+49 123 456789" autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="service">INTERESSE</label>
+                <select id="service" name="service">
+                  <option value="">Bitte wählen...</option>
+                  <option value="After Work Fliegenfischen (€89)">After Work Fliegenfischen — €89</option>
+                  <option value="Crash Kurs Fliegenfischen (€189)">Crash Kurs Fliegenfischen — €189</option>
+                  <option value="Guiding Isar (€250)">Guiding Isar — €250</option>
+                  <option value="Allgemeine Frage">Allgemeine Frage</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="message">NACHRICHT *</label>
+              <textarea id="message" name="message" required rows="5" placeholder="Wann habt ihr Zeit? Habt ihr Vorkenntnisse? Gibt es besondere Wünsche?"></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="submit-btn">
+                <span class="submit-text">ANFRAGE SENDEN</span>
+                <span class="submit-loading" style="display:none;">WIRD GESENDET...</span>
+              </button>
+            </div>
+            <div id="form-success" class="form-message form-success" style="display:none;">
+              ✓ Danke — wir melden uns bald.
+            </div>
+            <div id="form-error" class="form-message form-error" style="display:none;">
+              Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib uns direkt.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
-    <footer id="contact" class="footer-section">
+    <footer class="footer-section">
       <div class="footer-container">
         <div class="footer-block">
           <span>FLY FISHING EXPERIENCE MUNICH</span>
@@ -233,7 +293,9 @@
           <span>EST. 2024</span>
         </div>
         <div class="footer-block">
-          <a href="#">IMPRESSUM</a>
+          <a href="/impressum.html">IMPRESSUM</a>
+          &nbsp;·&nbsp;
+          <a href="/datenschutz.html">DATENSCHUTZ</a>
         </div>
       </div>
     </footer>
