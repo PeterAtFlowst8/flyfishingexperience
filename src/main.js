@@ -20,20 +20,17 @@ const observer = new IntersectionObserver((entries) => {
 
 // Target the new grid components for animation
 const gridItems = document.querySelectorAll(
-  '.grid-hero, .grid-mission, .grid-location, .grid-testimonials, .service-menu-item, .grid-faq, .footer-section'
+  '.grid-hero, .grid-mission, .grid-location, .grid-testimonials, .service-menu-item, .grid-faq, .footer-box'
 );
 
 gridItems.forEach((item, index) => {
   item.style.opacity = '0';
-  item.style.transform = 'translateY(20px)';
-  item.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out'; // Define transition here or in CSS
+  item.style.transform = 'translateY(40px) scale(0.98)';
+  // Snappy, heavy "printing press" ease curve
+  item.style.transition = 'opacity 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.17, 0.84, 0.44, 1)';
 
-  // Stagger the service menu items slightly
-  if (item.classList.contains('service-menu-item')) {
-    // Calculate index relative to the start of service items for stagger
-    // simplified stagger for now
-    item.style.transitionDelay = `${(index % 3) * 0.1}s`;
-  }
+  // Stagger the items slightly based on their index for a cascade effect
+  item.style.transitionDelay = `${index * 0.05}s`;
 
   observer.observe(item);
 });
@@ -43,29 +40,13 @@ const styleSheet = document.createElement("style");
 styleSheet.innerText = `
   .visible {
     opacity: 1 !important;
-    transform: translateY(0) !important;
+    transform: translateY(0) scale(1) !important;
   }
 `;
 document.head.appendChild(styleSheet);
 
 
-// 2. FAQ Accordion Logic
-document.querySelectorAll('.accordion-header').forEach(button => {
-  button.addEventListener('click', () => {
-    const accordionItem = button.parentElement;
-    const isActive = accordionItem.classList.contains('active');
-
-    // Close all other accordion items
-    document.querySelectorAll('.accordion-item').forEach(item => {
-      item.classList.remove('active');
-    });
-
-    // Toggle current item if it wasn't already active
-    if (!isActive) {
-      accordionItem.classList.add('active');
-    }
-  });
-});
+// FAQ Accordion logic removed as section is now a static list
 
 // 3. Smooth Scroll for Anchor Links (Masthead -> Sections)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

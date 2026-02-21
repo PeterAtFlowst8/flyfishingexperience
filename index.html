@@ -81,11 +81,12 @@
         </div>
         <div class="component-body">
           <div class="hero-image-wrapper">
-            <img src="/images/hero-trout.png" alt="Vintage Trout Engraving" class="hero-image">
+            <img src="/images/hero-trout.png" alt="Vintage Trout Engraving" class="hero-image halftone-filter">
           </div>
           <div class="hero-text-content">
             <h1 class="hero-headline">KEIN LATEIN.<br>NUR FISCH.</h1>
             <p class="hero-tagline">90% Bäume. 10% Fische. 100% Spaß.</p>
+            <a href="#contact" class="submit-btn hero-booking-btn">JETZT BUCHEN</a>
           </div>
         </div>
         <div class="component-footer">
@@ -113,6 +114,11 @@
           <div class="menu-footer">
             <div class="price-tag">
               <span class="currency">€</span>89
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path
+                  d="M 50 10 C 80 10, 95 30, 90 70 C 85 95, 20 95, 10 60 C 5 30, 30 15, 60 15 C 75 18, 80 30, 80 30">
+                </path>
+              </svg>
             </div>
             <a href="#contact" class="btn-text">DETAILS</a>
           </div>
@@ -134,6 +140,11 @@
           <div class="menu-footer">
             <div class="price-tag">
               <span class="currency">€</span>189
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path
+                  d="M 50 10 C 80 10, 95 30, 90 70 C 85 95, 20 95, 10 60 C 5 30, 30 15, 60 15 C 75 18, 80 30, 80 30">
+                </path>
+              </svg>
             </div>
             <a href="#contact" class="btn-text">DETAILS</a>
           </div>
@@ -155,6 +166,11 @@
           <div class="menu-footer">
             <div class="price-tag">
               <span class="currency">€</span>250
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path
+                  d="M 50 10 C 80 10, 95 30, 90 70 C 85 95, 20 95, 10 60 C 5 30, 30 15, 60 15 C 75 18, 80 30, 80 30">
+                </path>
+              </svg>
             </div>
             <a href="#contact" class="btn-text">DETAILS</a>
           </div>
@@ -203,38 +219,91 @@
       <!-- 6. FAQ Section -->
       <section id="faq" class="sidebar-widget grid-faq faq-card">
         <div class="component-header">
-          <h3 class="widget-title">FAQ</h3>
+          <h3 class="widget-title">RULES & REGULATIONS</h3>
+          <p class="title-description">KNOW BEFORE YOU GO</p>
         </div>
-        <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header">Fischereischein?</button>
-            <div class="accordion-content">
-              <p>Ja, in Bayern Pflicht. Wir erklären dir wie du ihn bekommst.</p>
-            </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h4 class="faq-question">FISCHEREISCHEIN?</h4>
+            <p class="faq-answer">Ja, in Bayern Pflicht. Wir erklären dir wie du ihn bekommst.</p>
           </div>
-          <div class="accordion-item">
-            <button class="accordion-header">Teures Equipment?</button>
-            <div class="accordion-content">
-              <p>Nein! Komm in Sneakers. Wir stellen alles.</p>
-            </div>
+          <div class="faq-item">
+            <h4 class="faq-question">TEURES EQUIPMENT?</h4>
+            <p class="faq-answer">Nein! Komm in Sneakers. Wir stellen alles.</p>
+          </div>
+          <div class="faq-item">
+            <h4 class="faq-question">WETTER?</h4>
+            <p class="faq-answer">Wir fischen bei (fast) jedem Wetter. Es gibt kein schlechtes Wetter, nur schlechte
+              Kleidung.</p>
           </div>
         </div>
       </section>
 
     </div> <!-- End Content Grid -->
 
-    <!-- Footer -->
+    <!-- Footer & Contact -->
     <footer id="contact" class="footer-section">
-      <div class="footer-container">
-        <div class="footer-block">
-          <span>FLY FISHING EXPERIENCE MUNICH</span>
+      <div class="container footer-grid">
+
+        <!-- Contact Form Box -->
+        <div class="footer-box contact-box">
+          <div class="box-header">
+            <h3>ANMELDUNG & KONTAKT</h3>
+            <span class="box-badge">BOOKING</span>
+          </div>
+          <p class="contact-intro">Schreib uns für Termine, Gutscheine oder Fragen. Wir antworten meistens abends nach
+            dem Fischen.</p>
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="input-group">
+                <label for="name">NAME / ALIAS</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
+              </div>
+              <div class="input-group">
+                <label for="email">E-MAIL</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="interest">INTERESSE / KURS</label>
+              <select id="interest" name="interest">
+                <option value="after-work">AFTER WORK (€89)</option>
+                <option value="crash-course">CRASH KURS (€189)</option>
+                <option value="guiding">GUIDING ISAR (€250)</option>
+                <option value="other">SONSTIGES / GUTSCHEIN</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="message">NACHRICHT</label>
+              <textarea id="message" name="message" rows="4" required
+                placeholder="Dein Wunschtermin oder deine Frage..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">ABSENDEN</button>
+          </form>
         </div>
-        <div class="footer-block">
-          <span>EST. 2024</span>
+
+        <!-- Info / Legal Box -->
+        <div class="footer-box info-box">
+          <div class="box-header">
+            <h3>THE FLY FISHING EXPERIENCE</h3>
+          </div>
+          <div class="info-content">
+            <p><strong>REVIER:</strong> MÜNCHEN / ISAR</p>
+            <p><strong>GEGRÜNDET:</strong> 2024</p>
+            <p><strong>STIL:</strong> OHNE SCHNICKSCHNACK</p>
+          </div>
+          <div class="legal-links">
+            <a href="#">IMPRESSUM</a>
+            <span class="nav-separator">|</span>
+            <a href="#">DATENSCHUTZ</a>
+            <span class="nav-separator">|</span>
+            <a href="#">AGB</a>
+          </div>
+          <div class="footer-stamp">
+            <img src="/images/logo.png" alt="Company Stamp" class="stamp-image halftone-filter">
+          </div>
         </div>
-        <div class="footer-block">
-          <a href="#">IMPRESSUM</a>
-        </div>
+
       </div>
     </footer>
   </div>
