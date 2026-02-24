@@ -147,29 +147,34 @@ ul {
     gap: 0;
   }
 
-  /* Grid Areas */
+  /* Grid Areas — explicit row placement to match newspaper layout */
   .grid-hero {
     grid-column: 1 / 13;
+    grid-row: 1;
   }
 
   /* Row 2: Mission (Left) + Widgets (Right) — shared vertical borders */
   .grid-mission {
     grid-column: 1 / 7;
+    grid-row: 2;
     border-right: var(--border-main);
   }
 
   .grid-location {
     grid-column: 7 / 10;
+    grid-row: 2;
     border-right: var(--border-main);
   }
 
   .grid-testimonials {
     grid-column: 10 / 13;
+    grid-row: 2;
   }
 
   /* Row 3: Services Strip */
   .grid-services {
     grid-column: 1 / 13;
+    grid-row: 3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0;
@@ -184,8 +189,10 @@ ul {
     border-right: var(--border-main);
   }
 
+  /* Row 4: FAQ */
   .grid-faq {
     grid-column: 1 / 13;
+    grid-row: 4;
   }
 }
 
