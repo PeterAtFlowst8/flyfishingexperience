@@ -1,9 +1,1 @@
-{
-  "redirects": [
-    {
-      "source": "/((?!coming-soon.html|impressum.html|datenschutz.html|api/).*)",
-      "destination": "/coming-soon.html",
-      "permanent": false
-    }
-  ]
-}
+{}
