@@ -103,22 +103,40 @@ ul {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 var(--space-md);
+  padding: 0;
 }
 
 .content-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-md);
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-lg);
+  gap: 0;
+  border: var(--border-main);
+}
+
+/* Every direct grid child gets a bottom border for row separation */
+.content-grid > * {
+  border-bottom: var(--border-main);
+}
+
+/* Last direct child: no bottom border (outer border handles it) */
+.content-grid > *:last-child {
+  border-bottom: none;
 }
 
 /* Mobile Services Grid */
 .grid-services {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-lg);
+  gap: 0;
+}
+
+/* Service cards: bottom border between stacked cards on mobile */
+.grid-services > .service-menu-item {
+  border-bottom: var(--border-main);
+}
+
+.grid-services > .service-menu-item:last-child {
+  border-bottom: none;
 }
 
 /* Desktop Grid */
@@ -126,8 +144,7 @@ ul {
   .content-grid {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto auto auto;
-    /* Hero, Mission/Widgets, Services */
-    gap: var(--space-lg);
+    gap: 0;
   }
 
   /* Grid Areas */
@@ -135,13 +152,15 @@ ul {
     grid-column: 1 / 13;
   }
 
-  /* Row 2: Mission (Left) + Widgets (Right) */
+  /* Row 2: Mission (Left) + Widgets (Right) — shared vertical borders */
   .grid-mission {
     grid-column: 1 / 7;
+    border-right: var(--border-main);
   }
 
   .grid-location {
     grid-column: 7 / 10;
+    border-right: var(--border-main);
   }
 
   .grid-testimonials {
@@ -153,20 +172,27 @@ ul {
     grid-column: 1 / 13;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--space-lg);
+    gap: 0;
+  }
+
+  /* Service cards: vertical borders between columns */
+  .grid-services > .service-menu-item {
+    border-bottom: none;
+  }
+
+  .grid-services > .service-menu-item:not(:last-child) {
+    border-right: var(--border-main);
   }
 
   .grid-faq {
     grid-column: 1 / 13;
-    border-top: var(--border-main);
-    padding-top: var(--space-xl);
   }
 }
 
 /* --- 6. HEADER (MASTHEAD) --- */
 .masthead {
-  border-bottom: var(--border-width) solid var(--color-ink);
-  margin-bottom: var(--space-lg);
+  border: var(--border-main);
+  border-bottom: none; /* Shared with content-grid top border */
   display: flex;
   flex-direction: column;
 }
@@ -176,7 +202,7 @@ ul {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-bottom: var(--border-width) solid var(--color-ink);
+  border-bottom: var(--border-main);
 }
 
 @media (min-width: 768px) {
@@ -333,7 +359,7 @@ ul {
 .service-menu-item,
 .faq-card {
   background: var(--color-newsprint);
-  border: var(--border-main);
+  /* No individual border — grid handles shared borders */
   padding: var(--space-md);
   display: flex;
   flex-direction: column;
@@ -440,16 +466,18 @@ ul {
 
 /* --- 9. SERVICES (MENU STYLE) --- */
 .service-menu-item {
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, color 0.2s, border-color 0.2s;
+  transition: box-shadow 0.2s, background-color 0.2s, color 0.2s;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 0;
 }
 
 .service-menu-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 6px 6px 0 var(--color-ink);
+  box-shadow: 4px 4px 0 var(--color-ink);
   background-color: var(--color-ink);
   color: var(--color-newsprint);
+  z-index: 1;
 }
 
 /* Animate SVG Pricing on Hover */
@@ -577,11 +605,8 @@ ul {
 
 /* --- 10. FOOTER & CONTACT (CLASSIFIEDS) --- */
 .footer-section {
-  border-top: 8px solid var(--color-ink);
-  /* Heavy masthead bottom */
-  border-bottom: 2px solid var(--color-ink);
-  margin-top: var(--space-2xl);
-  margin-bottom: var(--space-xl);
+  border: var(--border-main);
+  border-top: none; /* Shared with content-grid bottom border */
   background-color: var(--color-newsprint);
 }
 
