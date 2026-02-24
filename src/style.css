@@ -111,6 +111,7 @@ ul {
   grid-template-columns: 1fr;
   gap: 0;
   border: var(--border-main);
+  border-bottom: none; /* Shared with footer top border */
 }
 
 /* Every direct grid child gets a bottom border for row separation */
@@ -613,7 +614,8 @@ ul {
 /* --- 10. FOOTER & CONTACT (CLASSIFIEDS) --- */
 .footer-section {
   border: var(--border-main);
-  border-top: none; /* Shared with content-grid bottom border */
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: var(--color-newsprint);
 }
 
