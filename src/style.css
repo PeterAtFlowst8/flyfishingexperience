@@ -846,7 +846,7 @@ ul {
 
 /* --- 13. HALFTONE IMAGE FILTER --- */
 .halftone-filter {
-  filter: contrast(1.5) grayscale(1) drop-shadow(0px 0px 1px var(--color-ink));
+  filter: contrast(1.5) grayscale(1);
   mix-blend-mode: multiply;
   opacity: 0.9;
 }
