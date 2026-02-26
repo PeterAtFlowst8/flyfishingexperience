@@ -21,7 +21,8 @@ export default async function handler(req, res) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const notifyEmail = process.env.NOTIFY_EMAIL || 'peter@flowst8.eu';
+  const notifyEmail = process.env.CONTACT_EMAIL || 'client@flyfishingexperience.de';
+  const fromEmail = process.env.FROM_EMAIL || 'onboarding@resend.dev';
 
   if (!apiKey) {
     console.error('RESEND_API_KEY not set');
@@ -39,10 +40,10 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Fly Fishing Experience <noreply@flyfishingexperience.de>',
+        from: `Fly Fishing Experience <${fromEmail}>`,
         to: [notifyEmail],
         reply_to: email,
-        subject: `Neue Buchungsanfrage — ${name}`,
+        subject: `Neue Buchungsanfrage: ${service || 'Allgemein'}`,
         text: `Neue Kontaktanfrage über flyfishingexperience.de
 
 Name: ${name}
@@ -91,3 +92,4 @@ Direkt antworten: ${email}
     return res.status(500).json({ error: 'Server error' });
   }
 }
+

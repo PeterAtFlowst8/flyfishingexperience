@@ -2,6 +2,15 @@ import './style.css'
 
 console.log('Fly Fishing Experience: Broadsheet Edition Ready.');
 
+// Dateline: format today's date in German newspaper style
+const dateEl = document.querySelector('.dateline-date');
+if (dateEl) {
+  const now = new Date();
+  const days = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+  const months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+  dateEl.textContent = `${days[now.getDay()]}, ${now.getDate()}. ${months[now.getMonth()]} ${now.getFullYear()}`;
+}
+
 // 1. Intersection Observer for "Fade In" of Grid Items
 const observerOptions = {
   threshold: 0.1,
@@ -122,3 +131,62 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// 4. Handle Contact Form Submission
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector('.submit-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'WIRD GESENDET...';
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.7';
+
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        submitBtn.textContent = 'ERFOLGREICH GESENDET!';
+        submitBtn.style.backgroundColor = '#4caf50'; // Optional success color
+        submitBtn.style.color = '#fff';
+        contactForm.reset();
+
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.style.backgroundColor = '';
+          submitBtn.style.color = '';
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+        }, 5000);
+      } else {
+        throw new Error(result.error || 'Fehler beim Senden');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      submitBtn.textContent = 'FEHLER! NOCHMAL VERSUCHEN';
+      submitBtn.style.backgroundColor = '#c62828'; // Error color
+      submitBtn.style.color = '#fff';
+
+      setTimeout(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.style.backgroundColor = '';
+        submitBtn.style.color = '';
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+      }, 5000);
+    }
+  });
+}

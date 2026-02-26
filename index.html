@@ -13,7 +13,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://flyfishingexperience.de/" />
   <meta property="og:title" content="Fly Fishing Experience Munich | Fliegenfischen ohne Schnickschnack" />
-  <meta property="og:description" content="Fliegenfischen in München ohne Schnickschnack. Kurse für Anfänger, Guiding an der Isar und ehrliche Erlebnisse am Wasser. Jetzt buchen!" />
+  <meta property="og:description"
+    content="Fliegenfischen in München ohne Schnickschnack. Kurse für Anfänger, Guiding an der Isar und ehrliche Erlebnisse am Wasser. Jetzt buchen!" />
   <meta property="og:image" content="https://flyfishingexperience.de/og-image.jpg" />
   <meta property="og:locale" content="de_DE" />
   <meta property="og:site_name" content="Fly Fishing Experience Munich" />
@@ -21,7 +22,8 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Fly Fishing Experience Munich | Fliegenfischen ohne Schnickschnack" />
-  <meta name="twitter:description" content="Fliegenfischen in München ohne Schnickschnack. Kurse für Anfänger, Guiding an der Isar und ehrliche Erlebnisse am Wasser. Jetzt buchen!" />
+  <meta name="twitter:description"
+    content="Fliegenfischen in München ohne Schnickschnack. Kurse für Anfänger, Guiding an der Isar und ehrliche Erlebnisse am Wasser. Jetzt buchen!" />
   <meta name="twitter:image" content="https://flyfishingexperience.de/og-image.jpg" />
 
   <!-- Structured Data -->
@@ -100,7 +102,10 @@
         <div class="masthead-box logo-box">
           <!-- Simple Logo Placeholder -->
           <div class="fish-icon">
-            <img src="/images/logo.png" alt="Fly Fishing Experience Logo" class="logo-image">
+            <picture>
+              <source srcset="/images/logo.webp" type="image/webp">
+              <img src="/images/logo.png" alt="Fly Fishing Experience Logo" class="logo-image">
+            </picture>
           </div>
         </div>
         <div class="masthead-box title-box">
@@ -140,6 +145,13 @@
           </svg>
         </a>
       </nav>
+      <div class="dateline">
+        <span>VOL. I, NR. 1</span>
+        <span class="dateline-separator">&mdash;</span>
+        <span>MÜNCHEN / ISAR</span>
+        <span class="dateline-separator">&mdash;</span>
+        <span class="dateline-date"></span>
+      </div>
     </header>
 
     <!-- Main Content Grid - Bento / Broadsheet Layout -->
@@ -153,7 +165,10 @@
         </div>
         <div class="component-body">
           <div class="hero-image-wrapper">
-            <img src="/images/hero-trout.png" alt="Vintage Trout Engraving" class="hero-image halftone-filter">
+            <picture>
+              <source srcset="/images/hero-trout.webp" type="image/webp">
+              <img src="/images/hero-trout.png" alt="Vintage Trout Engraving" class="hero-image halftone-filter">
+            </picture>
           </div>
           <div class="hero-text-content">
             <h1 class="hero-headline">KEIN LATEIN.<br>NUR FISCH.</h1>
@@ -168,7 +183,21 @@
         </div>
       </section>
 
-      <!-- 2. Services Wrapper (The Menu) -->
+      <!-- 2. Location Sidebar (sits beside hero on desktop) -->
+      <div class="sidebar-widget grid-location location-card">
+        <div class="component-header">
+          <h3 class="widget-title">REVIER</h3>
+        </div>
+        <div class="component-body">
+          <p>Unsere Heimat ist die Isar. Wild, städtisch, wunderschön. Wir zeigen dir die besten Spots mitten in
+            München.</p>
+        </div>
+        <div class="component-footer">
+          <div class="article-number">SEE MAP P.4</div>
+        </div>
+      </div>
+
+      <!-- 3. Services Wrapper (The Menu) -->
       <section id="services" class="grid-services">
         <!-- Service 1 -->
         <article class="service-menu-item">
@@ -177,7 +206,10 @@
             <span class="menu-badge">DAS FILET</span>
           </div>
           <div class="menu-image-container">
-            <img src="/images/service-beer-rod.png" alt="Vintage Beer and Rod" class="service-image">
+            <picture>
+              <source srcset="/images/service-beer-rod.webp" type="image/webp">
+              <img src="/images/service-beer-rod.png" alt="Vintage Beer and Rod" class="service-image" loading="lazy">
+            </picture>
           </div>
           <div class="menu-details">
             <p>2 STUNDEN. 1 BIER. KEIN STRESS.</p>
@@ -193,6 +225,7 @@
               </svg>
             </div>
             <a href="#contact" class="btn-text">DETAILS</a>
+            <span class="article-number">SEE DETAILS P.2</span>
           </div>
         </article>
 
@@ -203,7 +236,10 @@
             <span class="menu-badge">GANZER FISCH</span>
           </div>
           <div class="menu-image-container">
-            <img src="/images/service-waders.png" alt="Vintage Waders" class="service-image">
+            <picture>
+              <source srcset="/images/service-waders.webp" type="image/webp">
+              <img src="/images/service-waders.png" alt="Vintage Waders" class="service-image" loading="lazy">
+            </picture>
           </div>
           <div class="menu-details">
             <p>GANZER TAG. WATHOSE INKLUSIVE.</p>
@@ -219,6 +255,7 @@
               </svg>
             </div>
             <a href="#contact" class="btn-text">DETAILS</a>
+            <span class="article-number">SEE DETAILS P.3</span>
           </div>
         </article>
 
@@ -229,7 +266,10 @@
             <span class="menu-badge">SPEZIALITÄT</span>
           </div>
           <div class="menu-image-container">
-            <img src="/images/service-map.png" alt="Vintage Map" class="service-image">
+            <picture>
+              <source srcset="/images/service-map.webp" type="image/webp">
+              <img src="/images/service-map.png" alt="Vintage Map" class="service-image" loading="lazy">
+            </picture>
           </div>
           <div class="menu-details">
             <p>WIR FINDEN. DU FÄNGST.</p>
@@ -245,11 +285,12 @@
               </svg>
             </div>
             <a href="#contact" class="btn-text">DETAILS</a>
+            <span class="article-number">SEE DETAILS P.5</span>
           </div>
         </article>
       </section>
 
-      <!-- 3. Mission / Manifesto Widget -->
+      <!-- 4. Mission / Manifesto Widget -->
       <div id="mission" class="sidebar-widget grid-mission manifesto-card">
         <div class="component-header">
           <h3 class="widget-title">WARUM WIR ANDERS SIND</h3>
@@ -257,21 +298,12 @@
         </div>
         <div class="component-body">
           <p class="manifesto-text">Den Fischen ist deine teure Ausrüstung egal. Wir nutzen solides, ehrliches
-            Equipment. Kein Tweed-Sakko nötig.</p>
-        </div>
-      </div>
-
-      <!-- 4. Location Widget -->
-      <div class="sidebar-widget grid-location location-card">
-        <div class="component-header">
-          <h3 class="widget-title">REVIER</h3>
-        </div>
-        <div class="component-body">
-          <p>Unsere Heimat ist die Isar. Wild, städtisch, wunderschön. Wir zeigen dir die besten Spots mitten in
-            München.</p>
+            Equipment. Kein Tweed-Sakko nötig. Unsere Philosophie: Weniger Ausrüstung, mehr Erlebnis. Die Isar
+            interessiert sich nicht für deine Markenrute — und die Forellen auch nicht. Wir glauben an einfaches
+            Handwerk, echte Gespräche am Wasser, und den Moment, wenn die Schnur zum ersten Mal singt.</p>
         </div>
         <div class="component-footer">
-          <div class="article-number">SEE MAP P.4</div>
+          <div class="article-number">SEE MANIFESTO P.6</div>
         </div>
       </div>
 
@@ -284,6 +316,14 @@
           <blockquote class="testimonial">
             <p>"Endlich mal kein elitäres Gehabe. Einfach nur Spaß am Wasser."</p>
             <cite>— Markus T., München</cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>"Bin mit Sneakers und null Ahnung aufgetaucht. Ging trotzdem ein Fisch an den Haken."</p>
+            <cite>— Lisa K., Schwabing</cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>"After Work war die beste Idee seit dem Feierabendbier. Nur besser."</p>
+            <cite>— Jonas R., Sendling</cite>
           </blockquote>
         </div>
       </div>
@@ -323,7 +363,8 @@
             <h3>ANMELDUNG & KONTAKT</h3>
             <span class="box-badge">BOOKING</span>
           </div>
-          <p class="contact-intro">Schreib uns für Termine, Gutscheine oder Fragen. Wir antworten meistens abends nach dem Fischen.</p>
+          <p class="contact-intro">Schreib uns für Termine, Gutscheine oder Fragen. Wir antworten meistens abends nach
+            dem Fischen.</p>
           <form id="contact-form" class="contact-form" novalidate>
             <div class="form-row">
               <div class="input-group">
@@ -346,7 +387,8 @@
             </div>
             <div class="input-group">
               <label for="message">NACHRICHT</label>
-              <textarea id="message" name="message" rows="4" required placeholder="Dein Wunschtermin oder deine Frage..."></textarea>
+              <textarea id="message" name="message" rows="4" required
+                placeholder="Dein Wunschtermin oder deine Frage..."></textarea>
             </div>
             <button type="submit" class="submit-btn">
               <span class="submit-text">ABSENDEN</span>
@@ -365,6 +407,7 @@
         <div class="footer-box info-box">
           <div class="box-header">
             <h3>THE FLY FISHING EXPERIENCE</h3>
+            <span class="box-badge">EST. 2024</span>
           </div>
           <div class="info-content">
             <p><strong>REVIER:</strong> MÜNCHEN / ISAR</p>
@@ -377,7 +420,10 @@
             <a href="/datenschutz.html">DATENSCHUTZ</a>
           </div>
           <div class="footer-stamp">
-            <img src="/images/logo.png" alt="Company Stamp" class="stamp-image halftone-filter">
+            <picture>
+              <source srcset="/images/logo.webp" type="image/webp">
+              <img src="/images/logo.png" alt="Company Stamp" class="stamp-image" loading="lazy">
+            </picture>
           </div>
         </div>
 
