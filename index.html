@@ -42,7 +42,7 @@
       "postalCode": "85716",
       "addressCountry": "DE"
     },
-    "priceRange": "€89–€250",
+    "priceRange": "€120–€280",
     "currenciesAccepted": "EUR",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -52,30 +52,30 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "After Work Fliegenfischen",
-            "description": "Feierabend-Kurs Fliegenfischen in München"
+            "name": "The Experience - Fliegenfischen erleben",
+            "description": "Ganztägiges Fliegenfischen-Erlebnis für Anfänger und Fortgeschrittene. Material kann gestellt werden."
           },
-          "price": "89.00",
+          "price": "280.00",
           "priceCurrency": "EUR"
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Crash Kurs Fliegenfischen",
-            "description": "Intensivkurs Fliegenfischen für Anfänger"
+            "name": "Kids - Auf Eppsteins Spuren",
+            "description": "Fliegenfischen für Kinder von 10-16 Jahren. Spaß und Fangerfolg im Vordergrund."
           },
-          "price": "189.00",
+          "price": "150.00",
           "priceCurrency": "EUR"
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Guiding Isar",
-            "description": "Geführtes Fliegenfischen an der Isar"
+            "name": "Methode, Technik, Taktik",
+            "description": "Halbtägiges Coaching für Fortgeschrittene. Wurftechnik, Methoden, Material-Check."
           },
-          "price": "250.00",
+          "price": "120.00",
           "priceCurrency": "EUR"
         }
       ]
@@ -199,92 +199,109 @@
 
       <!-- 3. Services Wrapper (The Menu) -->
       <section id="services" class="grid-services">
-        <!-- Service 1 -->
-        <article class="service-menu-item">
-          <div class="menu-header">
-            <h3>AFTER WORK</h3>
-            <span class="menu-badge">DAS FILET</span>
-          </div>
-          <div class="menu-image-container">
-            <picture>
-              <source srcset="/images/service-beer-rod.webp" type="image/webp">
-              <img src="/images/service-beer-rod.png" alt="Vintage Beer and Rod" class="service-image" loading="lazy">
-            </picture>
-          </div>
-          <div class="menu-details">
-            <p>2 STUNDEN. 1 BIER. KEIN STRESS.</p>
-            <p>Perfekt für Anfänger oder gestresste Büromenschen.</p>
-          </div>
-          <div class="menu-footer">
-            <div class="price-tag">
-              <span class="currency">€</span>89
-              <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path
-                  d="M 50 10 C 80 10, 95 30, 90 70 C 85 95, 20 95, 10 60 C 5 30, 30 15, 60 15 C 75 18, 80 30, 80 30">
-                </path>
-              </svg>
-            </div>
-            <a href="#contact" class="btn-text">DETAILS</a>
-            <span class="article-number">SEE DETAILS P.2</span>
-          </div>
-        </article>
-
-        <!-- Service 2 -->
+        <!-- Service 1: The Experience -->
         <article class="service-menu-item featured-item">
           <div class="menu-header">
-            <h3>CRASH KURS</h3>
-            <span class="menu-badge">GANZER FISCH</span>
+            <h3>THE EXPERIENCE</h3>
+            <span class="menu-badge">GANZER TAG</span>
           </div>
           <div class="menu-image-container">
             <picture>
               <source srcset="/images/service-waders.webp" type="image/webp">
-              <img src="/images/service-waders.png" alt="Vintage Waders" class="service-image" loading="lazy">
+              <img src="/images/service-waders.png" alt="Fliegenfischen erleben" class="service-image" loading="lazy">
             </picture>
           </div>
           <div class="menu-details">
-            <p>GANZER TAG. WATHOSE INKLUSIVE.</p>
-            <p>Lerne alles von Knoten bis Werfen.</p>
+            <p>FLIEGENFISCHEN ERLEBEN. AB DEM ERSTEN WURF.</p>
+            <p>Egal ob Anfänger oder Fortgeschrittener - erlebe was Fliegenfischen bedeutet und lerne ganz nebenbei das Ökosystem Wasser zu verstehen und für dich zu nutzen.</p>
+            <ul class="menu-features">
+              <li>Material kann gestellt werden</li>
+              <li>An verschiedenen Gewässern möglich</li>
+              <li>Mit oder ohne Angelschein</li>
+            </ul>
           </div>
           <div class="menu-footer">
             <div class="price-tag">
-              <span class="currency">€</span>189
+              <span class="currency">€</span>280
               <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                 <path
                   d="M 50 10 C 80 10, 95 30, 90 70 C 85 95, 20 95, 10 60 C 5 30, 30 15, 60 15 C 75 18, 80 30, 80 30">
                 </path>
               </svg>
             </div>
-            <a href="#contact" class="btn-text">DETAILS</a>
+            <a href="#contact" class="btn-text">ANFRAGEN</a>
+            <span class="article-number">SEE DETAILS P.2</span>
+          </div>
+        </article>
+
+        <!-- Service 2: Kids -->
+        <article class="service-menu-item">
+          <div class="menu-header">
+            <h3>KIDS</h3>
+            <span class="menu-badge">GANZER TAG</span>
+          </div>
+          <div class="menu-image-container">
+            <picture>
+              <source srcset="/images/service-beer-rod.webp" type="image/webp">
+              <img src="/images/service-beer-rod.png" alt="Kids Fliegenfischen" class="service-image" loading="lazy">
+            </picture>
+          </div>
+          <div class="menu-details">
+            <p>AUF EPPSTEINS SPUREN. 🎣</p>
+            <p>Dein Kind will das Fliegenfischen mal ausprobieren? Wir machen es in unseren Kursen fit und sichern so die Zukunft für diesen großartigen Sport. Spaß und Fangerfolg liegen im Vordergrund und werden spielerisch vermittelt.</p>
+            <ul class="menu-features">
+              <li>Von 10-16 Jahren</li>
+              <li>Gerne auch in Gruppen</li>
+              <li>Material kann gestellt werden</li>
+              <li>An verschiedenen Gewässern möglich</li>
+              <li>Mit oder ohne Angelschein</li>
+            </ul>
+          </div>
+          <div class="menu-footer">
+            <div class="price-tag">
+              <span class="currency">€</span>150
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path
+                  d="M 50 10 C 80 10, 95 30, 90 70 C 85 95, 20 95, 10 60 C 5 30, 30 15, 60 15 C 75 18, 80 30, 80 30">
+                </path>
+              </svg>
+            </div>
+            <a href="#contact" class="btn-text">ANFRAGEN</a>
             <span class="article-number">SEE DETAILS P.3</span>
           </div>
         </article>
 
-        <!-- Service 3 -->
+        <!-- Service 3: Methode, Technik, Taktik -->
         <article class="service-menu-item">
           <div class="menu-header">
-            <h3>GUIDING ISAR</h3>
-            <span class="menu-badge">SPEZIALITÄT</span>
+            <h3>METHODE &middot; TECHNIK &middot; TAKTIK</h3>
+            <span class="menu-badge">HALBER TAG</span>
           </div>
           <div class="menu-image-container">
             <picture>
               <source srcset="/images/service-map.webp" type="image/webp">
-              <img src="/images/service-map.png" alt="Vintage Map" class="service-image" loading="lazy">
+              <img src="/images/service-map.png" alt="Technik und Taktik" class="service-image" loading="lazy">
             </picture>
           </div>
           <div class="menu-details">
-            <p>WIR FINDEN. DU FÄNGST.</p>
-            <p>Für erfahrene Fliegenfischer neu am Wasser.</p>
+            <p>NEUES AUSPROBIEREN. BESSER WERDEN.</p>
+            <p>Du willst eine bestimmte Methode verbessern oder einen neuen Zielfisch nachstellen? Wie wäre es mit der 2-Hand auf Seeforelle? Wurftechnik verbessern, Material-Check und vieles mehr.</p>
+            <ul class="menu-features">
+              <li>Material kann gestellt werden oder wir tunen deins</li>
+              <li>An verschiedenen Gewässern möglich</li>
+              <li>Nur mit Angelschein</li>
+            </ul>
           </div>
           <div class="menu-footer">
             <div class="price-tag">
-              <span class="currency">€</span>250
+              <span class="currency">€</span>120
               <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                 <path
                   d="M 50 10 C 80 10, 95 30, 90 70 C 85 95, 20 95, 10 60 C 5 30, 30 15, 60 15 C 75 18, 80 30, 80 30">
                 </path>
               </svg>
             </div>
-            <a href="#contact" class="btn-text">DETAILS</a>
+            <a href="#contact" class="btn-text">ANFRAGEN</a>
             <span class="article-number">SEE DETAILS P.5</span>
           </div>
         </article>
@@ -379,9 +396,9 @@
             <div class="input-group">
               <label for="service">INTERESSE / KURS</label>
               <select id="service" name="service">
-                <option value="After Work Fliegenfischen (€89)">AFTER WORK (€89)</option>
-                <option value="Crash Kurs Fliegenfischen (€189)">CRASH KURS (€189)</option>
-                <option value="Guiding Isar (€250)">GUIDING ISAR (€250)</option>
+                <option value="The Experience - Fliegenfischen erleben (€280)">THE EXPERIENCE (€280)</option>
+                <option value="Kids - Auf Eppsteins Spuren (€150)">KIDS (€150)</option>
+                <option value="Methode, Technik, Taktik (€120)">METHODE / TECHNIK / TAKTIK (€120)</option>
                 <option value="Allgemeine Frage / Gutschein">SONSTIGES / GUTSCHEIN</option>
               </select>
             </div>
