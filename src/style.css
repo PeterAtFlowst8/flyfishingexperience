@@ -709,10 +709,11 @@ ul {
 /* --- 10. FOOTER & CONTACT (CLASSIFIEDS) --- */
 .footer-section {
   background-color: var(--color-newsprint);
-  border-top: var(--border-main);
-  border-bottom: var(--border-main);
-  border-left: var(--border-main);
-  border-right: var(--border-main);
+}
+
+/* Override content-grid last-child rule — footer needs its bottom border */
+.content-grid>.footer-section:last-child {
+  border-bottom: var(--border-main) !important;
 }
 
 .site-credit {
