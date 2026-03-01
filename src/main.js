@@ -86,6 +86,17 @@ if (contactForm) {
       message: document.getElementById('message').value.trim(),
     };
 
+    // Validate phone: must start with + and have 8-18 digits
+    const phoneDigits = data.phone.replace(/[\s\-()]/g, '');
+    if (!phoneDigits.match(/^\+[0-9]{8,18}$/)) {
+      errorMsg.textContent = 'Bitte gib eine gültige Telefonnummer mit Landesvorwahl an (z.B. +49 123 456 7890)';
+      errorMsg.style.display = 'block';
+      submitBtn.disabled = false;
+      submitText.style.display = 'inline';
+      submitLoading.style.display = 'none';
+      return;
+    }
+
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',

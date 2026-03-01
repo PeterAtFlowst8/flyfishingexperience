@@ -11,13 +11,19 @@ export default async function handler(req, res) {
   const { name, email, phone, message, service } = req.body;
 
   // Basic validation
-  if (!name || !email || !message) {
-    return res.status(400).json({ error: 'Name, email and message are required' });
+  if (!name || !email || !phone || !message) {
+    return res.status(400).json({ error: 'Name, email, phone and message are required' });
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return res.status(400).json({ error: 'Invalid email address' });
+  }
+
+  // Phone: must start with + and have 8-18 digits (E.164-ish)
+  const phoneClean = phone.replace(/[\s\-()]/g, '');
+  if (!/^\+[0-9]{8,18}$/.test(phoneClean)) {
+    return res.status(400).json({ error: 'Invalid phone number — please include country code (e.g. +49...)' });
   }
 
   const apiKey = process.env.RESEND_API_KEY;
