@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://flyfishingexperience.de/</loc>
+    <loc>https://www.flyfishingexperience.de/</loc>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://flyfishingexperience.de/impressum.html</loc>
+    <loc>https://www.flyfishingexperience.de/impressum.html</loc>
+    <lastmod>2026-02-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://flyfishingexperience.de/datenschutz.html</loc>
+    <loc>https://www.flyfishingexperience.de/datenschutz.html</loc>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
