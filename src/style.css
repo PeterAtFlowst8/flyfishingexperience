@@ -711,6 +711,8 @@ ul {
   background-color: var(--color-newsprint);
   border-top: var(--border-main);
   border-bottom: var(--border-main);
+  border-left: var(--border-main);
+  border-right: var(--border-main);
 }
 
 .site-credit {
@@ -771,9 +773,6 @@ ul {
   border-bottom: var(--border-hairline);
   padding-bottom: var(--space-sm);
   margin-bottom: var(--space-md);
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
 }
 
 .box-header h3 {
