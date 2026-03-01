@@ -709,6 +709,8 @@ ul {
 /* --- 10. FOOTER & CONTACT (CLASSIFIEDS) --- */
 .footer-section {
   background-color: var(--color-newsprint);
+  border-top: var(--border-main);
+  border-bottom: var(--border-main);
 }
 
 .site-credit {
@@ -736,6 +738,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
+  min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -761,6 +764,7 @@ ul {
 .info-box {
   align-items: flex-end;
   text-align: right;
+  justify-content: space-between;
 }
 
 .box-header {
