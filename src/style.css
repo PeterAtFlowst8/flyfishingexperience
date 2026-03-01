@@ -696,12 +696,11 @@ ul {
 /* --- 10. FOOTER & CONTACT (CLASSIFIEDS) --- */
 .footer-section {
   background-color: var(--color-newsprint);
-  padding-bottom: var(--space-lg);
 }
 
 .site-credit {
   text-align: center;
-  padding: var(--space-md) 0 var(--space-xl);
+  padding: var(--space-lg) 0 calc(var(--space-xl, 3rem) * 1.5);
   font-family: var(--font-body);
   font-size: var(--text-xs, 0.75rem);
   text-transform: uppercase;
@@ -733,21 +732,16 @@ ul {
 }
 
 .footer-box {
-  border: var(--border-main);
-  padding: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  padding-bottom: var(--space-xl, 3rem);
   display: flex;
   flex-direction: column;
 }
 
-/* Footer border collapse */
-.footer-box+.footer-box {
-  border-top: none;
-}
-
+/* Footer: vertical divider between boxes on desktop */
 @media (min-width: 768px) {
   .footer-box+.footer-box {
-    border-top: var(--border-main);
-    border-left: none;
+    border-left: var(--border-main);
   }
 }
 
