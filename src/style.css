@@ -194,6 +194,12 @@ ul {
     grid-column: 1 / 13;
     grid-row: 4;
   }
+
+  /* Row 5: Footer */
+  .grid-footer {
+    grid-column: 1 / 13;
+    grid-row: 5;
+  }
 }
 
 /* --- 6. HEADER (MASTHEAD) --- */
@@ -689,11 +695,6 @@ ul {
 
 /* --- 10. FOOTER & CONTACT (CLASSIFIEDS) --- */
 .footer-section {
-  border: var(--border-main);
-  max-width: 1440px;
-  margin: 0 auto;
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-md);
   background-color: var(--color-newsprint);
 }
 
