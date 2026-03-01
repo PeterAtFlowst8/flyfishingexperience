@@ -81,7 +81,7 @@ if (contactForm) {
     const data = {
       name: document.getElementById('name').value.trim(),
       email: document.getElementById('email').value.trim(),
-      phone: document.getElementById('phone').value.trim(),
+      phone: document.getElementById('phone')?.value?.trim() || '',
       service: document.getElementById('service').value,
       message: document.getElementById('message').value.trim(),
     };
