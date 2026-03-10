@@ -77,6 +77,11 @@ html {
 
 body {
   background-color: var(--color-newsprint);
+  background-image: url('/images/background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
   color: var(--color-ink);
   font-family: var(--font-body);
   line-height: 1.5;
