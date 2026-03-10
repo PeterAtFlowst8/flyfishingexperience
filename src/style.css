@@ -998,9 +998,12 @@ ul {
 
 /* --- 13. HALFTONE IMAGE FILTER --- */
 .halftone-filter {
-  filter: contrast(1.5) grayscale(1);
   mix-blend-mode: multiply;
   opacity: 0.9;
+}
+
+.hero-image-wrapper {
+  isolation: auto;
 }
 
 /* Article Number Style (e.g. "SEE MAP P.4") */
