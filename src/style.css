@@ -1110,9 +1110,9 @@ ul {
 .form-group select,
 .form-group textarea {
   font-family: var(--font-body);
-  font-size: var(--text-sm);
+  font-size: 16px;
   color: var(--color-ink);
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.7);
   border: var(--border-main);
   padding: var(--space-sm) var(--space-md);
   outline: none;
