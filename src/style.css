@@ -466,6 +466,10 @@ ul {
   border-top: var(--border-hairline);
 }
 
+.manifesto-text + .manifesto-text {
+  margin-top: var(--space-md);
+}
+
 /* Drop Cap */
 .manifesto-text::first-letter {
   font-family: var(--font-display);
