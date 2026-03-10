@@ -442,8 +442,11 @@ ul {
   padding-bottom: var(--space-sm);
   margin-bottom: var(--space-md);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
+  gap: var(--space-xs);
+  overflow: hidden;
 }
 
 .widget-title,
