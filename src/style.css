@@ -650,8 +650,7 @@ ul {
   height: 100%;
   max-width: 100%;
   object-fit: contain;
-  mix-blend-mode: multiply;
-  transition: filter 0.2s, mix-blend-mode 0.2s;
+  transition: filter 0.2s;
 }
 
 .menu-details {
