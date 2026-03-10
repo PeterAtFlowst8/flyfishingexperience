@@ -443,10 +443,8 @@ ul {
   margin-bottom: var(--space-md);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: baseline;
-  gap: var(--space-xs);
-  overflow: hidden;
+  gap: var(--space-sm) var(--space-lg);
 }
 
 .widget-title,
