@@ -573,53 +573,13 @@ ul {
 }
 
 .service-menu-item:hover {
-  box-shadow: 4px 4px 0 var(--color-ink);
-  background-color: var(--color-ink);
-  color: var(--color-newsprint);
-  z-index: 1;
+  box-shadow: none;
+  background-color: transparent;
+  color: var(--color-ink);
 }
 
 /* Animate SVG Pricing on Hover */
-.service-menu-item:hover .price-tag {
-  color: var(--color-newsprint);
-}
-
-.service-menu-item:hover .price-tag svg path {
-  stroke-dashoffset: 0;
-  stroke: var(--color-newsprint);
-}
-
-.service-menu-item:hover .article-number {
-  color: var(--color-newsprint);
-  border-color: var(--color-newsprint);
-}
-
-.service-menu-item:hover .menu-footer {
-  background-color: var(--color-ink);
-  border-color: var(--color-newsprint);
-}
-
-.service-menu-item:hover .menu-image-container {
-  background-color: var(--color-ink);
-  border-color: var(--color-newsprint);
-}
-
-.service-menu-item:hover .menu-image-container img {
-  /* Invert realistic black and white images to white lines on black, change blend mode */
-  filter: grayscale(100%) contrast(150%) invert(1);
-  mix-blend-mode: screen;
-}
-
-.service-menu-item:hover .btn-text {
-  color: var(--color-newsprint);
-  border-color: var(--color-newsprint);
-}
-
-.service-menu-item:hover .btn-text:hover {
-  color: var(--color-newsprint);
-  border-color: var(--color-newsprint);
-  opacity: 0.7;
-}
+/* Hover colour inversion removed per client request */
 
 .menu-image-container {
   height: 180px;
