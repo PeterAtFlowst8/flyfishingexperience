@@ -1112,11 +1112,11 @@ ul {
   font-family: var(--font-body);
   font-size: var(--text-sm);
   color: var(--color-ink);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.6);
   border: var(--border-main);
   padding: var(--space-sm) var(--space-md);
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.2s;
   width: 100%;
   box-sizing: border-box;
   -webkit-appearance: none;
@@ -1136,6 +1136,7 @@ ul {
 .form-group textarea:focus {
   border-color: var(--color-ink);
   box-shadow: 2px 2px 0 var(--color-ink);
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .form-group input::placeholder,
