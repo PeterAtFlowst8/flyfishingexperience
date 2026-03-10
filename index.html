@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="description"
     content="Fliegenfischen lernen in München und Umgebung. Ganztägige Erlebnisse, Kids-Kurse und Technik-Coaching an der Isar und weiteren Gewässern. Ab €120. Jetzt anfragen!" />
   <title>Fly Fishing Experience Munich | Fliegenfischen lernen in München</title>
@@ -441,6 +441,13 @@
     </div>
   </div>
   <script type="module" src="/src/main.js"></script>
+  <script>
+    document.addEventListener('touchstart', function(e) {
+      if (!e.target.closest('input, select, textarea')) {
+        document.activeElement.blur();
+      }
+    });
+  </script>
 </body>
 
 </html>
