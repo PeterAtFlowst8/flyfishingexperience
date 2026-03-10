@@ -621,10 +621,10 @@ ul {
 }
 
 .menu-image-container {
-  height: 240px;
+  height: 180px;
   overflow: hidden;
   border-bottom: var(--border-width) solid var(--color-ink);
-  padding: var(--space-lg);
+  padding: var(--space-md);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -632,9 +632,23 @@ ul {
   transition: background-color 0.2s, border-color 0.2s;
 }
 
+@media (min-width: 768px) {
+  .menu-image-container {
+    height: 240px;
+    padding: var(--space-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-image-container {
+    height: 280px;
+  }
+}
+
 .menu-image-container img {
-  width: 100%;
+  width: auto;
   height: 100%;
+  max-width: 100%;
   object-fit: contain;
   mix-blend-mode: multiply;
   transition: filter 0.2s, mix-blend-mode 0.2s;
