@@ -89,7 +89,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  background-attachment: fixed;
+  background-attachment: scroll;
   color: var(--color-ink);
   font-family: var(--font-body);
   font-size: var(--text-base);
