@@ -78,6 +78,16 @@
           },
           "price": "120.00",
           "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Vorbereitungskurs Bayerischer Fischereischein",
+            "description": "Anerkannter Vorbereitungskurs zur staatlichen Fischerprüfung in Bayern. Kleine Gruppen, persönliche Betreuung."
+          },
+          "price": "279.00",
+          "priceCurrency": "EUR"
         }
       ]
     }
@@ -183,7 +193,7 @@
           <h3 class="widget-title">REVIER</h3>
         </div>
         <div class="component-body">
-          <p>Unsere Heimat ist das Münchner Umland mit Amper und Baggerseen. Wir decken aber auch die klassischen Alpinen Gewässer im Voralpenland ab (Loisach, Mangfall, Tegernsee, Walchensee etc.)</p>
+          <p>Unsere Heimat ist das Münchner Umland mit Amper und Baggerseen. Wir decken aber auch die klassischen Forellen- und Äschenregionen des Voralpenlandes ab (Loisach, Mangfall...). Sowie Stillwater wie den Tegernsee, Walchensee etc. — nicht nur bei Hochwasser eine gute Alternative.</p>
         </div>
         <div class="component-footer">
           <div class="article-number">SEE MAP P.4</div>
@@ -192,6 +202,15 @@
 
       <!-- 3. Services Wrapper (The Menu) -->
       <section id="services" class="grid-services">
+        <div class="services-intro">
+          <p class="services-tagline">So individuell wie Du und Dein Leben, so sind auch unsere Angebote. Ob absoluter Beginner, wenig Zeit oder gleich mit der ganzen Familie — wir schaffen es zam' zu kommen.</p>
+          <div class="services-formats">
+            <span class="format-tag">GRUPPE / PRIVAT</span>
+            <span class="format-tag">AFTER HOUR</span>
+            <span class="format-tag">FAMILY / KIDS</span>
+            <span class="format-tag">FISCHEREISCHEIN</span>
+          </div>
+        </div>
         <!-- Service 1: The Experience -->
         <article class="service-menu-item featured-item">
           <div class="menu-header">
@@ -293,6 +312,40 @@
             <span class="article-number">SEE DETAILS P.5</span>
           </div>
         </article>
+
+        <!-- Service 4: Vorbereitungskurs Fischereischein -->
+        <article class="service-menu-item">
+          <div class="menu-header">
+            <h3>VORBEREITUNGSKURS FISCHEREISCHEIN</h3>
+            <span class="menu-badge">BAYERISCHER FISCHEREISCHEIN</span>
+          </div>
+          <div class="menu-image-container">
+            <picture>
+              <img src="/images/course-fischereischein.webp" alt="Vorbereitungskurs Bayerischer Fischereischein" class="service-image" loading="lazy">
+            </picture>
+          </div>
+          <div class="menu-details">
+            <p>DEIN WEG ZUM ANGELSCHEIN.</p>
+            <p>Du willst legal ans Wasser? Wir bereiten dich auf die staatliche Fischerprüfung in Bayern vor. Persönlich, in kleinen Gruppen, ohne Massenabfertigung. Von Fischkunde bis Gewässerökologie — alles was du brauchst, um die Prüfung sicher zu bestehen.</p>
+            <ul class="menu-features">
+              <li>Anerkannter Vorbereitungskurs</li>
+              <li>Kleine Gruppen, persönliche Betreuung</li>
+              <li>Prüfungsgebühr (€50) und Fischereischein separat</li>
+            </ul>
+          </div>
+          <div class="menu-footer">
+            <div class="price-tag">
+              <span class="currency">€</span>279
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path
+                  d="M 50 10 C 80 10, 95 30, 90 70 C 85 95, 20 95, 10 60 C 5 30, 30 15, 60 15 C 75 18, 80 30, 80 30">
+                </path>
+              </svg>
+            </div>
+            <a href="#contact" class="btn-text">ANFRAGEN</a>
+            <span class="article-number">SEE DETAILS P.6</span>
+          </div>
+        </article>
       </section>
 
       <!-- 4. Mission / Manifesto Widget -->
@@ -305,6 +358,36 @@
           <p class="manifesto-text">Wenn Du an Fliegenfischen denkst, dann denkst du an komplizierte Wurf-technik, exklusive Gewässer, elitäre Kreise und teures Equipment? Diesen Zahn wollen wir Dir ziehen. DENN jeder kann Fliegenfischen lernen, an jedem Gewässer, mit jedem Geldbeutel (und das ganz ohne Schnickschnack).</p>
           <p class="manifesto-text">Unser Ziel ist es dich zu begleiten auf Deiner Reise zur schönsten Art des Fischens!</p>
           <p class="manifesto-text">Am Ende kannst Du Deine Spinnrute getrost in die Ecke stellen, denn für jede Angelsituation kannst Du dann die Fliegenrute nehmen. Egal ob Baggersee, das hiesige Vereinsgewässer vor der Tür oder klassisch Alpin. Nur fürs Protokoll, wir haben nichts gegen Spinnfischen, finden das Fliegenfischen nur noch schöner!</p>
+        </div>
+      </div>
+
+      <!-- 4b. Team Section — Wer wir sind -->
+      <div class="sidebar-widget grid-team team-card">
+        <div class="component-header">
+          <h3 class="widget-title">WER WIR SIND</h3>
+          <p class="title-description">THE TEAM</p>
+        </div>
+        <div class="component-body team-grid">
+          <div class="team-member">
+            <div class="team-photo-wrapper">
+              <img src="/images/team-armin.webp" alt="Armin" class="team-photo" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              >
+              <div class="team-photo-placeholder" style="display:none">A</div>
+            </div>
+            <h4 class="team-name">ARMIN</h4>
+            <p class="team-role">GUIDE & GRÜNDER</p>
+          </div>
+          <div class="team-member">
+            <div class="team-photo-wrapper">
+              <img src="/images/team-christian.webp" alt="Christian" class="team-photo" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              >
+              <div class="team-photo-placeholder" style="display:none">C</div>
+            </div>
+            <h4 class="team-name">CHRISTIAN</h4>
+            <p class="team-role">GUIDE & KURSLEITER FISCHEREISCHEIN</p>
+          </div>
         </div>
       </div>
 
@@ -387,6 +470,7 @@
                   <option value="The Experience - Fliegenfischen erleben (€280)">THE EXPERIENCE (€280)</option>
                   <option value="Kids — Mein erstes Fliegenfischen (€150)">KIDS (€150)</option>
                   <option value="Methode, Technik, Taktik (€120)">METHODE / TECHNIK / TAKTIK (€120)</option>
+                  <option value="Vorbereitungskurs Fischereischein (€279)">FISCHEREISCHEIN (€279)</option>
                   <option value="Allgemeine Frage / Gutschein">SONSTIGES / GUTSCHEIN</option>
                 </select>
               </div>
